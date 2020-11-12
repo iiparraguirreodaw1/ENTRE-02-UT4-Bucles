@@ -20,14 +20,32 @@ public class PintorFiguras
      * (usa bucles for)
      */
     public  void dibujarFigura(int altura) {
-        
+      for(int j=(int)(altura); j>0; j--){  
+          for(int i=0; i<j; i++) {  
+              System.out.print( " " );  
+            }  
+          System.out.println("BBBB===="); 
+      }
+     
+        int filas = altura;
+        for (int alto =1; alto <= filas; alto++){
+        //Espacios
+        for(int espacio =1; espacio < filas; espacio ++){
+            System.out.print("");
+        }
+        //Asteriscos
+        for(int letras = 1; letras <=(alto)-1; letras++){
+            System.out.print("====BBBB");
+        }
+        System.out.println(" ");
+      
     }
+}
 
     /**
      * Método privado de ayuda que escribe n espacios en la misma línea
      */
     private  void escribirEspacios(char caracter, int n) {
-         
 
     }
 }
