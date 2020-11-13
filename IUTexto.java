@@ -46,11 +46,12 @@ public class IUTexto
         int numero1 = teclado.nextInt();
         System.out.println("Introduce el segundo numero: ");
         int numero2 = teclado.nextInt();
-        String repite= teclado.nextLine();
-        while(repite == "S" || repite == "s"){
+        int sumaTotal = 0;
+        String repite= "S";
+        while(repite.equals("S") || repite.equals("s")){
         if(utilidades1.estaEnOctal(numero1) && utilidades1.estaEnOctal(numero2)){
             if(utilidades1.contarCifras(numero1) == utilidades1.contarCifras(numero2)){
-                calculadora.sumarEnOctal(numero1, numero2);
+                sumaTotal = calculadora.sumarEnOctal(numero1, numero2);
             }
             else{
                 System.out.println("Los numeros no tienen las mismas cifras");
@@ -59,6 +60,10 @@ public class IUTexto
         else{
             System.out.println("Los numeros no estan en octal.");
         }
+        System.out.println("La suma de los numeros es: " + sumaTotal);
+        System.out.println("¿Quieres repetir?");
+        repite= teclado.nextLine();
+        Pantalla.hacerPausa();
     }
 }
 
@@ -71,11 +76,20 @@ public class IUTexto
     private void dibujarFiguras()
     {
         pantalla1.borrarPantalla();
-        System.out.println("Introduce el valor de la altura: ");
-        int altura = teclado.nextInt();
-        if(altura >0 && altura <10){
+        int altura = 0;
+        boolean correcto = false;
+        do{
+            System.out.println("Introduce el valor de la altura: ");
+            altura = teclado.nextInt();
+            if(altura<10 && altura>0){
+                correcto = true;
+            }
+            else{
+                 correcto = false;
+            }
+        }while(!correcto);
         pintor.dibujarFigura(altura);
-       }
+    
     }
 
 }

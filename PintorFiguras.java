@@ -27,19 +27,16 @@ public class PintorFiguras
           System.out.println("BBBB===="); 
       }
      
-        int filas = altura;
-        for (int alto =1; alto <= filas; alto++){
-        //Espacios
-        for(int espacio =1; espacio < filas; espacio ++){
+        for (int alto =1; alto <= altura; alto++){
+        for(int espacio =1; espacio < altura; espacio ++){
             System.out.print("");
         }
-        //Asteriscos
         for(int letras = 1; letras <=(alto)-1; letras++){
             System.out.print("====BBBB");
         }
         System.out.println(" ");
       
-    }
+    }   
 }
 
     /**
