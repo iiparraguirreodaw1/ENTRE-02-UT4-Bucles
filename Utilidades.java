@@ -2,7 +2,7 @@
  *   Clase de utilidades
  *   Incluye métodos estáticos
  *   
- *   @author - 
+ *   @author - Iker Iparraguirre 
  */
 public class Utilidades
 {

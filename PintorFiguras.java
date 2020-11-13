@@ -2,7 +2,7 @@
 /**
  *  Clase que dibuja una figura 
  * 
- * @author - 
+ * @author - Iker Iparraguirre
  *  
  */
 public class PintorFiguras
@@ -24,7 +24,7 @@ public class PintorFiguras
           for(int i=0; i<j; i++) {  
               System.out.print( " " );  
             }  
-          System.out.println("BBBB===="); 
+          System.out.println("BBBB====");
       }
      
         for (int alto =1; alto <= altura; alto++){
@@ -36,13 +36,16 @@ public class PintorFiguras
         }
         System.out.println(" ");
       
-    }   
+    }
 }
-
     /**
      * Método privado de ayuda que escribe n espacios en la misma línea
      */
     private  void escribirEspacios(char caracter, int n) {
-
+        /*caracter = ' ';
+        int altura = n;
+        for(int i=altura; i>0;i++){
+            System.out.println(" ");
+        }*/
     }
 }
